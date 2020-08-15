@@ -18,6 +18,8 @@ class GetRequester
     result = JSON.parse(self.get_response_body)
     result.collect do |array|
       array
+      #.fetch_values("name", "occupation") would be to fetch values of two desired keys
+      #"#{array["name"]} #{array["occupation"]}" also this
     end
   end
 end
